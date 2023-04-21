@@ -1,0 +1,15 @@
+<div class="header-container d-flex align-items-center p-5">
+    <div class="title-wrapper d-flex align-items-center flex-grow-1">
+        <a class="title-value d-flex align-items-center gap-3" href="#">
+            <div class="logo-v">{{ logoLetter }}</div>
+            <div class="name">{{ data?.name }}</div>
+        </a>
+    </div>
+    <div class="menus d-flex align-items-center gap-5">
+        <ng-container *ngFor="let option of optionData">
+            <a class="option-v" [class]="option?.link" [routerLink]="option?.link" [href]="option?.link" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+                {{ option?.name }}
+            </a>
+        </ng-container>
+    </div>
+</div>

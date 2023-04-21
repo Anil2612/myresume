@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    .app-wrapper {
+        background-color: #212122;
+        font-family: "Poppins", Helvetica, sans-serif !important;
+        color: white !important;
+    }
+}
+
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    background-color: #212122d1;
+    // border-bottom: 1px solid #333;
+    z-index: 1000000;
+
+}

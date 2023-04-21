@@ -1,0 +1,27 @@
+.footer-wrapper {
+    background-color: #252525;
+    .socials {
+        font-size: 0.9rem;
+        .social {
+            color: #aaa;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            &:is(:hover, :focus) {
+                outline: none;
+                color: white;
+            }
+        }
+    }
+    .mine {
+        font-size: 0.6rem;
+        color: #aaa;
+        a {
+            text-decoration: none;
+            color: #aaa;
+        }
+        .copy {
+            color: #aaa;
+        }
+    }
+}

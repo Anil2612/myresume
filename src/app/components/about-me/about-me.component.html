@@ -1,0 +1,66 @@
+<div class="about-me-container px-5">
+  
+  <div class="profile-container d-flex align-items-center justify-content-center gap-5">
+    <div class="img-container"></div>
+    <div class="detail-wrapper d-flex flex-column gap-4">
+      <div class="designation">{{ profileData.designation }}</div>
+      <div class="name">{{ profileData.name }}</div>
+      <div class="description">
+        {{ profileData.description }}
+      </div>
+      <div class="btns d-flex gap-4 my-2">
+        <button class="download" (click)="open('resume')">Download CV</button>
+        <button class="contact" (click)="open('contact')">Contact</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-container d-flex flex-column gap-3 py-5">
+
+    <div class="section-wrapper">
+      <div class="heading">{{ aboutMeDetails?.whatIDo?.heading }}</div>
+      <div class="detail-container d-flex gap-5 py-5 flex-wrap">
+        <ng-container *ngFor="let detail of aboutMeDetails?.whatIDo?.details">
+          <div class="detail-part d-flex gap-3 align-items-center">
+            <div class="icon">
+              <mat-icon>{{ detail?.icon }}</mat-icon>
+            </div>
+            <div class="details">
+              {{ detail?.content }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="section-wrapper">
+      <div class="heading">{{ aboutMeDetails?.companies?.heading }}</div>
+      <div class="detail-container d-flex gap-5 py-5 flex-wrap">
+        <ng-container *ngFor="let detail of aboutMeDetails?.companies?.details">
+          <a class="detail-part company-card d-flex flex-column justify-content-center align-items-center" [href]="detail.link" target="_blank">
+            <div class="d-flex align-items-center gap-2">
+              <div class="icon"><mat-icon>apartment</mat-icon></div>
+              <div class="details">{{ detail?.name }}</div>
+            </div>
+            <div class="duration">( {{detail?.from}} - {{detail?.to}} )</div>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="section-wrapper">
+      <div class="heading">{{ aboutMeDetails?.funFacts?.heading }}</div>
+      <div class="detail-container d-flex gap-5 py-4 flex-wrap">
+        <ng-container *ngFor="let detail of aboutMeDetails?.funFacts?.details">
+          <div class="detail-part d-flex gap-3 align-items-center">
+            <div class="icon"><mat-icon>{{ detail?.icon }}</mat-icon></div>
+            <div class="details">{{ detail?.content }}</div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+</div>

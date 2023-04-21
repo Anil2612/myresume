@@ -1,0 +1,83 @@
+<app-title titleValue="Resume" [subTitleValue]="totalExp">
+  <div class="resume-container p-5 d-flex flex-column gap-3">
+    <div class="e-e-container d-flex align-items-center gap-5 pb-4">
+      <div class="e-e-wrapper w-50 py-2">
+        <div class="heading">Education</div>
+        <ng-container *ngFor="let eduDetails of eduResumeData">
+          <div class="details pt-5">
+            <div class="ed-header d-flex align-items-center gap-2 px-2">
+              <div class="year p-1 px-2">{{eduDetails?.year}}</div>
+              <div class="ed-institute">{{eduDetails?.institution}}</div>
+            </div>
+            <div class="ed-details pt-3 ms-5">
+              <div class="ed-heading">{{eduDetails?.topic}}</div>
+              <div class="detail opacity-50">
+                Score: {{eduDetails?.gpa}}
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="e-e-wrapper w-50 py-2">
+        <div class="heading">Experience</div>
+        <ng-container *ngFor="let eduDetails of expResumeData">
+          <div class="details pt-5">
+            <div class="ed-header d-flex align-items-center gap-2 px-2">
+              <div class="year p-1 px-2">{{eduDetails?.year}}</div>
+              <div class="ed-institute">{{eduDetails?.institution}}</div>
+            </div>
+            <div class="ed-details pt-3 ms-5">
+              <div class="ed-heading">{{eduDetails?.designation}}</div>
+              <div class="detail opacity-50">
+                Duration: {{eduDetails?.expValue}} months
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="cert-container pt-5">
+      <div class="heading">Certificates & Awards</div>
+      <div class="cert-cards py-5 d-flex align-items-center gap-4">
+        <a class="cert-card p-3 d-flex gap-4 align-items-center justify-content-center" (click)="open('assets/data/Microsoft_Certified_Professional_Certificate.pdf')">
+          <div>
+            <mat-icon class="icon">card_membership</mat-icon>
+          </div>
+          <div class="detail">
+            <div class="title">Microsoft Technology Associate</div>
+            <div class="subject">Introduction to programming using JavaScript</div>
+            <div class="issuer">Issuer: Microsoft</div>
+          </div>
+        </a>
+        <a class="cert-card p-3 d-flex gap-2 align-items-center justify-content-center">
+          <div>
+            <mat-icon class="icon">workspace_premium</mat-icon>
+          </div>
+          <div class="detail">
+            <div class="title">Spot award winner for the month of August 2020</div>
+            <div class="issuer">Issuer: Rapid Value Solutions</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="skills-container pb-5">
+      <div class="heading">Skills</div>
+      <div class="primary main py-3">
+        <div class="title py-3">Primary</div>
+        <div class="skills-wrapper d-flex align-items-center gap-4">
+          <ng-container *ngFor="let skill of primarySkills">
+            <div class="skill">{{skill?.skill}}</div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="secondary main">
+        <div class="title py-3">Secondary</div>
+        <div class="skills-wrapper d-flex align-items-center gap-4">
+          <ng-container *ngFor="let skill of secondarySkills">
+            <div class="skill">{{skill?.skill}}</div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-title>

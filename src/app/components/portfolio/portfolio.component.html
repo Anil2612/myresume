@@ -1,0 +1,68 @@
+<app-title titleValue="Portfolio">
+    <div class="project-container d-flex align-items-start pb-5">
+        <div class="portfolio-container flex-column align-items-center w-100">
+            <div class="portfolio-wrapper d-flex gap-2 flex-column">
+                <div class="heading my-5">Company Projects</div>
+                <ng-container *ngFor="let project of companyProjectDetails">
+                    <div class="project-card p-4">
+                        <h4 class="my-4">{{ project?.title }}</h4>
+                        <div class="description">{{ project?.description }}</div>
+                        <div class="jd-container py-2">
+                            <ng-container *ngIf="project?.jrDetail?.length">
+                                <div class="jd-label">Job Responsibilities</div>
+                                <ul class="m-0">
+                                    <li class="jd-desc-detail" *ngFor="let jd of project?.jrDetail"> {{jd}} </li>
+                                </ul>
+                            </ng-container>
+                           
+                            <div class="jd-to-container pt-3" *ngIf="project?.techOveriew?.length">
+                                <div class="jd-to-label">Technical Overview</div>
+                                <div class="jd-to-detail d-flex gap-3 pt-3">
+                                    <ng-container *ngFor="let to of project?.techOveriew">
+                                        <div class="chips">{{ to }}</div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="association-wrapper" [title]="'Associated with '+ project?.company">{{ project?.company}}</div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="portfolio-container self flex-column align-items-center w-100">
+            <div class="portfolio-wrapper d-flex gap-2 flex-column">
+                <div class="heading my-5">Internal Projects</div>
+                <ng-container *ngFor="let project of internalProjectDetails">
+                    <div class="project-card p-4">
+                        <h4 class="my-4 d-flex gap-2 align-items-center">
+                            <div class="label">{{ project?.title }}</div>
+                            <div class="icon" title="Git Link">
+                                <img src="assets/images/git.png" alt="Git">
+                            </div>
+                        </h4>
+                        <div class="description">{{ project?.description }}</div>
+                        <div class="jd-container py-2">
+                            <ng-container *ngIf="project?.jrDetail?.length">
+                                <div class="jd-label">Job Responsibilities</div>
+                                <ul class="m-0">
+                                    <li class="jd-desc-detail" *ngFor="let jd of project?.jrDetail"> {{jd}} </li>
+                                </ul>
+                            </ng-container>
+                           
+                            <div class="jd-to-container pt-3" *ngIf="project?.techOveriew?.length">
+                                <div class="jd-to-label">Technical Overview</div>
+                                <div class="jd-to-detail d-flex gap-3 pt-3">
+                                    <ng-container *ngFor="let to of project?.techOveriew">
+                                        <div class="chips">{{ to }}</div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="association-wrapper" [title]="'Associated with '+ project?.company">{{ project?.company}}</div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+   
+</app-title>

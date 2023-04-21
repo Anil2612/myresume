@@ -1,0 +1,147 @@
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+
+    .portfolio-wrapper {
+        .heading {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 600;
+            &:before {
+                content: " ";
+                position: absolute;
+                width: 100px;
+                background-color: #ad0000;
+                height: 3px;
+                bottom: -20px;
+            }
+
+            &:after {
+                content: " ";
+                position: absolute;
+                width: 170px;
+                left: 30px;
+                background-color: #2d2d2e;
+                height: 3px;
+                bottom: -20px;
+            }
+        }
+
+        .project-card {
+            position: relative;
+            min-height: 300px;
+            background-color: #333;
+            border: 2px solid #444;
+            min-width: 200px;
+            max-width: 600px;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+            justify-content: center;
+            overflow: hidden;
+
+            h4 {
+                position: relative;
+                font-size: 1.2rem;
+                font-weight: 600;
+
+                .icon {
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: -20px;
+                        width: 35px;
+                        height: 35px;
+                        cursor: pointer;
+                        filter: invert(1);
+                        :is(:hover, :focus) {
+                            filter: sepia(100%) !important;
+                        }
+                    }
+                }
+                // color: #007beb;
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    width: 40%;
+                    background-color: #ad0000;
+                    height: 3px;
+                    bottom: -8px;
+                }
+
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    width: 100%;
+                    left: 60px;
+                    background-color: #2d2d2e;
+                    height: 3px;
+                    bottom: -8px;
+                }
+            }
+
+            .jd-container {
+                .jd-label {
+                    font-weight: 600;
+                }
+            }
+
+            .jd-to-container {
+                .jd-to-label {
+                    font-weight: 600;
+                }
+
+                .jd-to-detail {
+                    .chips {
+                        background-color: #ad0000;
+                        padding: 0.4em 1em;
+                        font-size: 0.8rem;
+                        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                    }
+                }
+            }
+
+            .association-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 23px !important;
+                position: absolute;
+                background-color: #ad0000;
+                min-width: 137px;
+                min-height: 20px;
+                transform: rotate(45deg);
+                font-size: 0.7rem;
+                top: 25px;
+                right: -30px;
+                font-weight: 600;
+                box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+                user-select: none;
+
+            }
+        }
+    }
+}
+
+.self {
+    .association-wrapper {
+        background-color: #0060bb !important;
+    }
+
+    .heading {
+        &:before {
+            background-color: #007beb !important;
+        }
+    }
+
+    h4 {
+        &:before {
+            background-color: #007beb !important;
+        }
+    }
+
+    .chips {
+        background-color: #007beb !important;
+    }
+}

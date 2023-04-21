@@ -1,0 +1,149 @@
+.resume-container {
+    .heading {
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: 600;
+        &:before {
+            content: " ";
+            position: absolute;
+            width: 100px;
+            background-color: #007beb;
+            height: 3px;
+            bottom: -10px;
+        }
+        &:after {
+            content: " ";
+            position: absolute;
+            width: 80px;
+            left: 30px;
+            background-color: #2d2d2e;
+            color: red;
+            height: 3px;
+            bottom: -10px;
+        }
+    }
+}
+
+.e-e-wrapper {
+    .details {
+        position: relative;
+        .ed-header {
+            .year {
+                position: relative;
+                font-size: 0.8rem;
+                border: solid #007beb 2px;
+                border-radius: 15px;
+                z-index: 1000;
+                background-color: #222;
+            }
+            .ed-institute {
+                font-size: 0.8rem;
+                color: #aaa;
+            }
+        }
+        .ed-details {
+            font-size: 0.8rem;
+            .ed-heading {
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            background-color: #333;
+            height: 100%;
+            width: 1px;
+            left: 25px;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: #333;
+            height: 2px;
+            width: 100%;
+            top: calc(100% + 25px);
+        }
+    }
+}
+
+.cert-container {
+    .heading {
+        &:before {
+            content: " ";
+            position: absolute;
+            width: 100px;
+            background-color: #007beb;
+            height: 3px;
+            bottom: -10px;
+        }
+        &:after {
+            content: " ";
+            position: absolute;
+            width: 150px;
+            left: 60px;
+            background-color: #2d2d2e;
+            color: red;
+            height: 3px;
+            bottom: -10px;
+        }
+    }
+}
+
+.cert-cards {
+    .cert-card {
+        text-align: center;
+        background-color: #333 ;
+        border: 2px solid #444;
+        border-radius: 10px;
+        min-height: 100px;
+        width: 50% !important;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        color: white;
+        max-height: 250px;
+        .icon {
+            font-size: 4rem;
+            color: goldenrod;
+            width: 100px;
+        }
+        .title {
+            font-size: 1rem;
+        }
+        .detail {
+            text-align: left;
+            .subject {
+                font-size: 0.8rem;
+            }
+            .issuer {
+                font-size: 0.8rem;
+                opacity: 0.7;
+            }
+        }
+        &:is(:hover, :focus) {
+            outline: none;
+            box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+        }
+    }
+}
+
+
+.skills-container {
+    .main {
+        .title {
+            font-weight: 600;
+        }
+    }
+    .skills-wrapper {
+        .skill {
+            // opacity: 0.8;
+            background-color: #01519b;
+            color: white;
+            padding: 0.5em 2em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: default;
+        }
+    }
+}

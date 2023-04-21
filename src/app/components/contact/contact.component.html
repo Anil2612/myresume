@@ -1,0 +1,48 @@
+<app-title titleValue="Contact">
+    <div class="contact-container pt-5 px-5">
+        <app-loader *ngIf="isLoading"></app-loader>
+        <iframe class="w-100 map"
+            (load)="isLoading = false"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.860218878184!2d77.66459377514211!3d12.980790914676522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae115ac31f716b%3A0x935518d3877f98ee!2sVivek%20Paradise%2C%202nd%20Cross%2C%20Chowdeswari%20Temple%20St%2C%20Byrasandra%2C%20C%20V%20Raman%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560093!5e0!3m2!1sen!2sin!4v1672503802160!5m2!1sen!2sin"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <div class="contact-details d-flex py-5 gap-5">
+            <div class="contact-info d-flex flex-column gap-4">
+                <ng-container *ngFor="let detail of contactDetails">
+                    <div class="info d-flex align-items-center gap-4">
+                        <div class="icon"><mat-icon>{{detail?.icon}}</mat-icon></div>
+                        <div class="detail">
+                            <div class="heading">{{detail?.heading}}</div>
+                            <div class="detail-info">
+                                {{detail?.info}}
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="contact-form w-100">
+                <div class="heading">How Can I Help You?</div>
+                <div class="content-form py-4 w-100">
+                    <form class="d-flex flex-column gap-4 p-1" [formGroup]="contactForm" (submit)="submitContactDetails()">
+                        <div class="d-flex gap-3">
+                            <div class="part-1 d-flex flex-column gap-2 w-100 align-items-center">
+                                <input  class="input" type="text" placeholder="FullName" autocomplete="off" formControlName="fullName" tabindex=1>
+                                <input  class="input" type="email" placeholder="Email Address" autocomplete="off" formControlName="email" tabindex=2>
+                                <input  class="input"type="text" placeholder="Subject" autocomplete="off" formControlName="subject" tabindex=3>
+                                <button class="download text-center w-50 my-4" tabindex="5"> Send Message</button>
+                            </div>
+                            <div class="part-2 w-100">
+                                <textarea  class="input" cols="30" rows="10" placeholder="Message" autocomplete="off" formControlName="message" tabindex=4></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="message w-100">
+                        <p class="text-danger text-center" *ngIf="isSubmit && contactForm.invalid">Please fill all the fields!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-title>
