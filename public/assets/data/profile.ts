@@ -174,6 +174,9 @@ export const data = {
             skill: 'Angular 2+'
         },
         {
+            skill: 'React'
+        },
+        {
             skill: 'Javascript'
         },
         {
@@ -198,9 +201,6 @@ export const data = {
         },
         {
             skill: 'Express JS'
-        },
-        {
-            skill: 'React JS'
         },
         {
             skill: 'Firebase'
