@@ -2,10 +2,9 @@ export const data = {
     name: 'Anil S Nair',
     designation: 'Frontend Developer',
     description: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-        debitis dolore recusandae ex maxime possimus vel magni fugiat
-        distinctio ipsa, cupiditate, magnam incidunt eius harum ab illo?
-        Porro, accusamus labore?`,
+    Hello there! I'm Anil, and I'm thrilled to share my portfolio with you. Here, 
+    you'll find a collection of my work that spans frontend. From design to development, 
+    each project is a labor of love, crafted with care and creativity.`,
     menuOptions: [
         {
             name: 'About Me',
@@ -35,45 +34,27 @@ export const data = {
             details: [
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Design and implement user interfaces: Front-end developers are responsible for translating design mockups and wireframes into functional user interfaces using HTML, CSS, and JavaScript. They ensure that the UI elements are visually appealing, intuitive to use, and aligned with the overall design aesthetic.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Cross-browser compatibility and responsiveness: Front-end developers must ensure that websites and web applications look and function consistently across different web browsers and devices. This involves utilizing responsive design techniques to adapt layouts and styles based on screen size and device orientation.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Collaboration with designers and back-end developers: Front-end developers work closely with UI/UX designers to understand design requirements and implement them effectively. They also collaborate with back-end developers to integrate front-end code with server-side logic, such as API calls and data retrieval.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Optimizing performance: Front-end developers optimize website performance by writing efficient code, minimizing HTTP requests, and optimizing images and other media files. They also implement techniques like lazy loading and code splitting to improve page load times and overall user experience.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Testing and debugging: Front-end developers conduct thorough testing to identify and fix bugs, inconsistencies, and usability issues. This may involve manual testing, as well as using debugging tools and browser developer tools to troubleshoot code errors and ensure functionality across different environments.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Staying updated on emerging technologies: Front-end development is a rapidly evolving field, with new tools, frameworks, and best practices emerging regularly. Front-end developers invest time in learning and staying updated on the latest trends and technologies to incorporate them into their workflow and deliver innovative solutions to clients and users.`
                 },
             ]
         },
@@ -108,17 +89,11 @@ export const data = {
             details: [
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `Front-end developers often engage in "CSS battles," where they compete to create the most visually impressive designs using only HTML and CSS, pushing the boundaries of what's possible with front-end technologies.`
                 },
                 {
                     icon: 'desktop_windows',
-                    content: `
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Et labore vero ea laborum error quas dolores hic,
-                    enim modi maxime! Molestiae corrupti nihil error nulla? Illo neque odit mollitia ex.`
+                    content: `JavaScript has evolved into a powerhouse language that drives not only web browsers but also server-side, mobile, and desktop applications through various frameworks and libraries.`
                 },
             ]
         }
@@ -174,6 +149,9 @@ export const data = {
             skill: 'Angular 2+'
         },
         {
+            skill: 'React'
+        },
+        {
             skill: 'Javascript'
         },
         {
@@ -198,9 +176,6 @@ export const data = {
         },
         {
             skill: 'Express JS'
-        },
-        {
-            skill: 'React JS'
         },
         {
             skill: 'Firebase'
