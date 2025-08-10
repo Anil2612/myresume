@@ -6,11 +6,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = environment.apiUrl;
-
   constructor(private http: HttpClient) { }
 
   getAnswer(body: any) {
-    return this.http.post(`${this.apiUrl}/ask`, body)
+    return this.http.post(`https://myresume-be.onrender.com/ask`, body)
   }
 }
