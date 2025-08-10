@@ -9,5 +9,31 @@
     <div class="footer-wrapper">
       <app-footer></app-footer>
     </div>
+    <div class="chat-wrapper">
+      <div
+        class="chatbot-bubble"
+        *ngIf="!isOpen"
+        (click)="toggleChat()"
+        tabindex="0"
+        aria-label="Open Chatbot"
+      >
+        <div class="chat-icon">
+          <div class="chat-icon-dot"></div>
+          <div class="chat-icon-dot"></div>
+          <div class="chat-icon-dot"></div>
+        </div>
+        <span class="tooltip">Want to Talk?</span>
+      </div>
+      <div
+        class="chatbox-window"
+        *ngIf="isOpen"
+        @fadeSlide
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chatbox-label"
+      >
+        <app-chatbox (close)="toggleChat()"></app-chatbox>
+      </div>
+    </div>
   </div>
 </div>

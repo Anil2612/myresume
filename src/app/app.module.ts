@@ -10,7 +10,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChatboxComponent } from './components/chatbox/chatbox.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutMeComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    ChatboxComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatIconModule,
     ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

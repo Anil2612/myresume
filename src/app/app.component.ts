@@ -9,5 +9,10 @@ import { GeneralService } from './services/general.service';
 })
 export class AppComponent {
   profileData = data;
+  isOpen=false;
+
+  toggleChat = () => {
+    this.isOpen = !this.isOpen;
+  }
 
 }

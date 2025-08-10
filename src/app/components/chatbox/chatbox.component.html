@@ -1,0 +1,91 @@
+<div class="chatbox-container">
+  <div class="chatbox-header">
+    <div class="header-left">
+      <!-- Chat icon SVG -->
+      <div class="logo-v">A</div>
+      <div class="header-text">
+        <div class="chatbox-title">Chat with me!</div>
+        <!-- <div class="chatbox-subtitle">We’re here to help 😊</div> -->
+      </div>
+    </div>
+
+    <button
+      class="close-btn"
+      (click)="closeChat()"
+      aria-label="Close chat window"
+    >
+      &times;
+    </button>
+  </div>
+
+  <div class="messages" [@listAnimation]>
+    <div
+      *ngFor="let msg of messages"
+      [ngClass]="{
+        'bot-message': msg.from === 'bot',
+        'user-message': msg.from === 'user'
+      }"
+      class="message"
+    >
+        <div class="message-icon">
+          <ng-container *ngIf="msg.from === 'bot'">
+            <!-- Bot icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#007bff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2a10 10 0 0 0-7 17.5v2h14v-2A10 10 0 0 0 12 2zM9 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+              />
+            </svg>
+          </ng-container>
+          <ng-container *ngIf="msg.from === 'user'">
+            <!-- User icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#28a745"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M6 20c0-3.3 5.4-3.5 6-3.5s6 .2 6 3.5v1H6v-1z" />
+            </svg>
+          </ng-container>
+        </div>
+
+        <div class="message-content" [ngClass]="{
+        'bot-message-content': msg.from === 'bot',
+        'user-message-content': msg.from === 'user'
+      }">
+          {{ msg.text }}
+        </div>
+    </div>
+          <div *ngIf="botTyping">
+        <div class="typing-loader"><span></span><span></span><span></span></div>
+      </div>
+  </div>
+
+  <div class="input-area">
+    <textarea
+      [(ngModel)]="newMessage"
+      (keydown.enter)="sendMessage($event)"
+      placeholder="Type your message..."
+      rows="2"
+    ></textarea>
+    <button class="send-btn" (click)="sendMessage()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="#007bff"
+        viewBox="0 0 24 24"
+      >
+        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+      </svg>
+    </button>
+  </div>
+</div>
