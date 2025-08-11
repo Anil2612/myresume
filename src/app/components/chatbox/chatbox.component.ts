@@ -8,6 +8,8 @@ import {
   query,
   stagger,
 } from '@angular/animations';
+import posthog from 'posthog-js';
+
 interface Message {
   text: string;
   from: 'user' | 'bot';
@@ -51,7 +53,7 @@ export class ChatboxComponent implements OnInit {
 
   ngOnInit() { }
 
-  constructor(private apiService: ApiService){}
+  constructor(private apiService: ApiService) { }
 
   sendMessage(event?: any) {
     if (event) {
@@ -66,11 +68,20 @@ export class ChatboxComponent implements OnInit {
     this.scrollToBottom();
 
     this.botTyping = true;
-
-  this.apiService.getAnswer({topic: trimmedMsg}).subscribe((response: any)=> {
+    posthog.capture('user_prompt', {
+      section: 'user',
+      time: new Date().toISOString(),
+      response: trimmedMsg
+    });
+    this.apiService.getAnswer({ topic: trimmedMsg }).subscribe((response: any) => {
       this.botTyping = false;
       this.messages.push({ text: response?.response?.raw, from: 'bot' });
       this.scrollToBottom();
+      posthog.capture('chatbot_response', {
+        section: 'chatbot',
+        time: new Date().toISOString(),
+        response: response?.response?.raw
+      });
     })
   }
 

@@ -4,27 +4,33 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { RouteMiddlewareGuard } from './guards/route-middleware.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: AboutMeComponent
+    component: AboutMeComponent,
+    canActivate: [RouteMiddlewareGuard]
   },
   {
     path: 'resume',
-    component: ResumeComponent
+    component: ResumeComponent,
+    canActivate: [RouteMiddlewareGuard]
   },
   {
     path: 'portfolio',
-    component: PortfolioComponent
+    component: PortfolioComponent,
+    canActivate: [RouteMiddlewareGuard]
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    canActivate: [RouteMiddlewareGuard]
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: '',
+    canActivate: [RouteMiddlewareGuard]
   }
 ];
 
